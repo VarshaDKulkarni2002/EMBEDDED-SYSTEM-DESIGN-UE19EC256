@@ -1,0 +1,18 @@
+ AREA ADDREG,CODE,READONLY
+ 	ENTRY
+ 	ADR R0,Thumbprog+1
+	BX R0
+	CODE16
+Thumbprog
+	MOV R2,#2
+	MOV R3,#3
+	ADD R2,R3
+	ADR R0,ARMProg
+	BX R0
+    CODE32
+ARMProg
+	MOV R4,#4
+	MOV R5,#5
+	ADD R4,R4,R5
+	
+	END
